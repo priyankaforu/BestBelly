@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
           <Image
-            src="/Hero.png"
+            src="/hero.png"
             alt="Product illustration"
             width={340}
             height={340}
