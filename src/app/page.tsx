@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
           <Image
-            src="/Hero.svg"
+            src="/Hero.png"
             alt="Product illustration"
             width={340}
             height={340}
@@ -39,7 +39,7 @@ export default function Home() {
             className="md:block hidden hover:scale-112 delay-70 duration-200 ease-in-out"
           />
           <Image
-            src="/score.svg"
+            src="/score.png"
             alt="Score card illustration"
             unoptimized={true}
             width={340}
