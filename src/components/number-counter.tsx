@@ -18,8 +18,8 @@ export function Numbercounter({
 }: NumberCounterProps) {
   const [count, setCount] = useState(start);
   const countRef = useRef(start);
-  const requestRef = useRef<number>();
-  const startTimeRef = useRef<number>();
+  const requestRef = useRef<number | null>(null);
+  const startTimeRef = useRef<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLSpanElement>(null);
   useEffect(() => {
