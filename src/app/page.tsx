@@ -1,103 +1,77 @@
+import Header from "@/components/header";
+import "./globals.css";
 import Image from "next/image";
+import Emailcard from "@/components/email";
+import { Numbercounter } from "@/components/number-counter";
+import { ArrowDown } from "lucide-react";
+import Timecounter from "@/components/time-counter";
+import Analysis from "@/components/analysis";
+import { Features } from "@/components/features";
+import Buttons from "@/components/downloads";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col min-h-screen justify-center p-4 animate-slideUp animation-delay-100 pb-16">
+      <div>
+        <Header />
+      </div>
+      <div className="flex flex-col justify-center items-center space-y-16 p-4 md:mt-4">
+        <h1 className="scroll-m-20 text-center text-5xl font-extrabold text-balance border-b-8 pb-1 border-primary">
+          Stay Healthy with one scan
+        </h1>
+        <p className="scroll-m-20 text-center text-xl md:text-2xl font-600 text-balance ">
+          BestBelly is a health score calculator that helps you pick the healthy
+          food products in supermarket. Scan the ingredients to get the health
+          score of the product.
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
+          <Image
+            src="/Hero.svg"
+            alt="Product illustration"
+            width={340}
+            height={340}
+            priority={true}
+            unoptimized={true}
+            blurDataURL="URL"
+            placeholder="blur"
+            className="md:block hidden hover:scale-112 delay-70 duration-200 ease-in-out"
+          />
+          <Image
+            src="/score.svg"
+            alt="Score card illustration"
+            unoptimized={true}
+            width={340}
+            height={340}
+            priority={true}
+            blurDataURL="URL"
+            placeholder="blur"
+            className="md:hover:scale-112 delay-70 duration-200 ease-in-out"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <Timecounter />
+        <div className="flex flex-col items-center">
+          <h1 className="scroll-m-20 min-w-1 text-center grid grid-rows-2 gap-1 md:gap-2 text-3xl md:text-5xl font-extrabold text-balance">
+            <Numbercounter
+              end={326}
+              duration={2500}
+              className="text-2xl md:text-4xl text-chart-2"
+            />
+            Users Subscribed Already
+          </h1>
+          <div className="flex justify-center items-center size-16 mt-4 mb-4 lg:mb-10 border-2 border-gray-400 rounded-full animate-bounce">
+            <ArrowDown className="size-7" />
+          </div>
+          <Emailcard />
+        </div>
+        <Analysis />
+        <Features />
+        <div className="justify-center">
+          <Buttons />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
