@@ -14,10 +14,14 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "BestBelly - Nutri Score Checker & Health Food Scanner",
+  title: {
+    default: "BestBelly - Nutri Score Checker & Health Food Scanner",
+    template: "%s-BestBelly",
+  },
   description:
     "BestBelly is the ultimate health score calculator that helps you pick healthy food products in supermarkets. Scan ingredients to get instant nutri scores and make informed food choices. Stay healthy with one scan!",
   metadataBase: new URL("https://bestbelly.app"),
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
