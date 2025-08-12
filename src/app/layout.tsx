@@ -14,9 +14,10 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "A nutri score checking app",
+  title: "BestBelly - Nutri Score Checker & Health Food Scanner",
   description:
-    "This app is used to check the nutri score products, available in the market",
+    "BestBelly is the ultimate health score calculator that helps you pick healthy food products in supermarkets. Scan ingredients to get instant nutri scores and make informed food choices. Stay healthy with one scan!",
+  metadataBase: new URL("https://bestbelly.app"),
 };
 
 export default function RootLayout({
@@ -29,7 +30,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

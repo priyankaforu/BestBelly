@@ -1,0 +1,1 @@
+BestBelly - Health Score Calculator. Scan food ingredients and get instant nutri scores. Stay healthy with one scan!
