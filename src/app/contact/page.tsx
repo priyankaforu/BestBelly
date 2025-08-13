@@ -3,7 +3,11 @@ import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Typewriter from "@/components/typewriter";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Contact",
+};
 export default function Contact() {
   return (
     <div className="animate-fadeInUp">
